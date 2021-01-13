@@ -1,0 +1,31 @@
+<!doctype HTML>
+
+<head>
+    <title>A Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./w3.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link href="./game.css" rel="stylesheet">
+</head>
+
+<body bgcolor="#000000">
+    <h1>You find an animal. How do you do hunt the animal?</h1>
+    <br>
+    <div class="w3-center">
+        <div class="w3-bar">
+             <a onclick="Choice1()" class="w3-button w3-white w3-hover-black w3-bar-item">RUN AT IT</a>
+            <button class="w3-bar-item" style="width:5%"></button>
+             <a onclick="Choice2()" class="w3-button w3-white w3-hover-black w3-bar-item">SNEAK UP ON IT</a> 
+        </div>
+    </div>
+    <script>
+        function Choice1() {
+            location.assign("./2-1.html");
+        }
+
+        function Choice2() {
+            location.assign("./3.html");
+        }
+    </script>
+</body>

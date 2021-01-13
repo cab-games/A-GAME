@@ -1,0 +1,90 @@
+<!doctype HTML>
+
+<head>
+    <title>A Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta http-equiv="refresh" content="5;url=./game/1.html" />
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+     .body {
+        background-color: Black;
+        vertical-align: middle;
+    }
+    .main {
+        height: 100%; width: 100%;
+        background-color: Black;
+        display: inline-table;
+        background-color: Black;
+        vertical-align: middle;
+    }
+    .center {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        color: White;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 15px;
+    }
+    .text {
+        text-align: center;
+        vertical-align: middle;
+        color: White;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 13px;
+    }
+    #myProgress {
+        width: 100%;
+        background-color: #000;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 20px;
+    }
+    #myBar {
+        width: 0%;
+        height: 30px;
+        background-color: #ffffff;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 30px;
+        color: white;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 15px;
+    }
+    </style>
+</head>
+<body bgcolor="#000000" onload="move()" class="body">
+<div class="main">
+    <div class="center">
+        <br>
+    <div id="myProgress">
+  <div id="myBar" style="color:#000">0%</div>
+  <div id="text"></div>
+</div>
+    </div>
+</div>
+<!--<button onclick="move()">Run</button> -->
+
+<script>
+function move() {
+  var elem = document.getElementById("myBar");   
+  var text = document.getElementById("text");  
+  var width = 0;
+  var id = setInterval(frame, 40);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      text.innerHTML = 'Done';
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+      text.innerHTML = 'Loading';
+    }
+  }
+}
+</script>
+</body>
